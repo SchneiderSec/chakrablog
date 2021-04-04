@@ -1,0 +1,35 @@
+[{
+    "title": "EPA Agent vulnerability via Untrusted Search Path",
+    "cve": "CVE-2019-17446",
+    "vendor":"Eracent"
+},
+{
+    "title": "Unauth File Deletion",
+    "cve": "CVE-2020-15175",
+    "vendor":"GLPI"
+},
+{
+    "title": "Stored Cross-Site Scripting",
+    "cve": "CVE-2020-15177",
+    "vendor":"GLPI"
+},
+{
+    "title": "Unauthenticated SQLi",
+    "cve": "CVE-2020-15176",
+    "vendor":"GLPI"
+},
+{
+    "title": "API endpoint privilege escalation",
+    "cve": "CVE-2020-3985",
+    "vendor":"VMWare"
+},
+{
+    "title": "Unsafe handling of system parameters",
+    "cve": "CVE-2020-4002",
+    "vendor":"VMWare"
+},
+{
+    "title":"SQL injection Information Disclosure",
+    "cve": "CVE-2020-4003",
+    "vendor":"VMWare"
+}]
