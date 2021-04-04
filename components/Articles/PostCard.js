@@ -1,6 +1,6 @@
 import { Box, Heading, Link, Text, useColorModeValue } from "@chakra-ui/react";
 
-const PostCard = ({ frontMatter }) => {
+const PostCard = ({ frontMatter, ...rest }) => {
     const { title, excerpt, date, slug } = frontMatter; 
     return(
     <Link
@@ -16,6 +16,7 @@ const PostCard = ({ frontMatter }) => {
             bgColor={useColorModeValue('white', 'gray.700')}
             mb="5" 
             p="5"
+            {...rest}
             >
             <Heading 
                 fontSize={['md', 'lg', 'lg', 'lg']} 

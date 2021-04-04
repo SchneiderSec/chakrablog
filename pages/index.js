@@ -57,11 +57,11 @@ export default function Home({ posts }) {
             </TextContent>
           </Box>
           <Box>
-            <Heading size="md" mb={4}>
+            <Heading size="md" mb={4} ml={2}>
               Most Recent Post:
             </Heading>
             <div>
-              <PostCard frontMatter={posts[0].frontMatter}/>                    
+              <PostCard ml={3} frontMatter={posts[0].frontMatter}/>                    
             </div>
           </Box>
         </VStack>
