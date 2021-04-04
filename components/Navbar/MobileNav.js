@@ -1,4 +1,4 @@
-import { Flex, Stack, Menu, Box, Text, MenuList, MenuItem, MenuButton, Button, Icon  } from "@chakra-ui/react"
+import { Flex, Stack, Menu, Box, Text, MenuList, MenuItem, MenuButton, Button, Icon, Spacer  } from "@chakra-ui/react"
 import DarkModeSwitch from "../DarkModeSwitch"
 import NavLink from "../NavLink"
 import { TiThMenu, TiThMenuOutline } from 'react-icons/ti'
@@ -28,7 +28,7 @@ const MobileNav = () => {
             display={["flex", "none", "none", "none"]}
             maxWidth='100%'
         >
-                <Box >
+                <Box>
                     <Box d="flex">
                     <NavLink label="SchneiderSec" to="/" fontSize="xl" as="h3" />
                         <Box ml="2" display={['block', 'block', 'block', 'block']} align="center">
@@ -36,25 +36,27 @@ const MobileNav = () => {
                         </Box>
                     </Box>
                 </Box>
-                <Menu onOpen={() => setMenuOpen(true)} onClose={() => setMenuOpen(false)} >
-                    <MenuButton as={Button} _focus={{ outline: 'none' }}>
-                        <Icon as={menuOpen ? TiThMenuOutline : TiThMenu} />
-                    </MenuButton>
-                    <MenuList>
-                        <MenuItem >
-                            <NavLink label="Articles" to="/articles" />
-                        </MenuItem>
-                        <MenuItem>
-                            <NavLink label="Disclosures" to="/disclosures" />
-                        </MenuItem>
-                        <MenuItem>
-                            <NavLink label="Contact" to="/contact" />
-                        </MenuItem>  
-                        <MenuItem>
-                            <NavLink label="About" to="/about" />
-                        </MenuItem>  
-                    </MenuList> 
-                </Menu>
+                <Box>
+                    <Menu onOpen={() => setMenuOpen(true)} onClose={() => setMenuOpen(false)} >  
+                        <MenuButton as={Button} _focus={{ outline: 'none' }}>
+                            <Icon as={menuOpen ? TiThMenuOutline : TiThMenu} />
+                        </MenuButton>
+                        <MenuList>
+                            <MenuItem >
+                                <NavLink label="Articles" to="/articles" />
+                            </MenuItem>
+                            <MenuItem>
+                                <NavLink label="Disclosures" to="/disclosures" />
+                            </MenuItem>
+                            <MenuItem>
+                                <NavLink label="Contact" to="/contact" />
+                            </MenuItem>  
+                            <MenuItem>
+                                <NavLink label="About" to="/about" />
+                            </MenuItem>  
+                        </MenuList> 
+                    </Menu>
+                </Box>
         </Flex>
     )
 }

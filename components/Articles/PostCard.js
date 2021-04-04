@@ -14,8 +14,9 @@ const PostCard = ({ frontMatter, ...rest }) => {
             w={['xs', 'md', 'lg', 'lg']} 
             borderRadius="lg" 
             bgColor={useColorModeValue('white', 'gray.700')}
-            mb="5" 
+            mb="3" 
             p="5"
+            mr="3"
             {...rest}
             >
             <Heading 

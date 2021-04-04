@@ -42,7 +42,6 @@ export const getStaticProps = async () => {
 
 export default function Home({ posts }) {
   return (
-    <>
       <PageLayout heading="Welcome">
         <VStack
         spacing={4}
@@ -66,6 +65,5 @@ export default function Home({ posts }) {
           </Box>
         </VStack>
       </PageLayout>
-    </>
   )
 }

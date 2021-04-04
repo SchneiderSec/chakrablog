@@ -44,7 +44,7 @@ export default function Articles({ posts }) {
   return (
     <>
       <PageLayout heading="Articles" >
-        <div>
+        <div style={{ marginLeft: '5px' }}>
             {cards}
         </div>
       </PageLayout>

@@ -1,7 +1,7 @@
 import { Heading, Text, Flex, Stack, useColorModeValue } from '@chakra-ui/react';
 import TextContent from '../../layouts/TextContent';
 
-export default function PageLayout({heading, children}){
+export default function PageLayout({heading, children, ...rest}){
     return(
         <Stack
         as="main"
@@ -21,11 +21,8 @@ export default function PageLayout({heading, children}){
           >
             {heading}
           </Heading>
-          <TextContent>
-            {children}
-          </TextContent>
+          {children}
         </Flex>
-
       </Stack>
     )
 }

@@ -8,7 +8,7 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 */
 export default function DisclosureTable(){
     return(
-        <Table variant="striped" colorScheme={useColorModeValue("blackAlpha", "gray")}>
+        <Table variant="striped" colorScheme={useColorModeValue("blackAlpha", "gray")} fontWeight="600" fontSize={['small', 'medium', 'medium', 'medium']}>
             <Thead>
                 <Tr>
                     <Th>Vulnerability Title</Th>
