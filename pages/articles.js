@@ -4,7 +4,7 @@ import PostCard from '../components/Articles/PostCard';
 import PageLayout from '../components/layouts/PageLayout';
   
   export const getStaticProps = async () => {
-    const files = await fs.readdirSync(`${process.cwd()}\\content\\`);
+    const files = await fs.readdirSync(`${process.cwd()}/content/`);
     const posts = files.map(folder => {
         const metaread = fs.readFileSync(`content/${folder}/index.md`).toString();
 
