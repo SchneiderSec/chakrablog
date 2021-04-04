@@ -7,7 +7,7 @@ import matter from 'gray-matter';
 import PostCard from '../components/Articles/PostCard';
 
 export const getStaticProps = async () => {
-  const files = await fs.readdirSync(`${process.cwd()}\\content\\`);
+  const files = await fs.readdirSync(`${process.cwd()}/content/`);
   const posts = files.map(folder => {
       const metaread = fs.readFileSync(`content/${folder}/index.md`).toString();
 
@@ -41,7 +41,6 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ posts }) {
-  console.log(posts[0])
   return (
     <>
       <PageLayout heading="Welcome">
