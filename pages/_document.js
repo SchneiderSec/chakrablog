@@ -16,7 +16,6 @@ class MyDocument extends Document {
             <Html lang='en-US'>
                 <Head />
                 <body className='loading'>
-                    <ColorModeScript />
                     <Main />
                     <NextScript />
                 </body>
