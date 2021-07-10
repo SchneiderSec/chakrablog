@@ -12,8 +12,7 @@ const MainLayout = ({ children }) => {
             <Circle width="120px" height="120px"/>
             <Box
             maxW="100%"
-            bg={useColorModeValue('rgba(255,255,255,0.8)', 'rgba(26, 33, 42, 0.8)')}
-            >
+           >
             
             <DeskNavbar  />
             <MobileNav />

@@ -1,12 +1,12 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, useColorModeValue } from '@chakra-ui/react';
 
 const themes = {
     useSystemColorMode: false,
     initialColorMode: 'light',
     styles: {
         global: (props) => ({
-            "*": {
-                bg: 'none'                
+            "body": {
+                bg: useColorModeValue('white','rgba(26, 32, 44, 1)')
             },
             "p":
             {
