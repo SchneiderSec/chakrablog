@@ -14,8 +14,7 @@ const themes = {
                 color: props.colorMode === "dark" ? 'gray.100' : "black"
             },
         })
-    },
-    initialColorMode: 'dark'
+    }
 }
 
 const theme = extendTheme(themes)
