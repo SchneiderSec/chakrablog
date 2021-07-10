@@ -1,10 +1,11 @@
-import { Box, Heading, Link, StackDivider, useColorModeValue, VStack } from '@chakra-ui/react';
+import { Box, Heading, StackDivider, useColorModeValue, VStack } from '@chakra-ui/react';
 import PageLayout from '../components/layouts/PageLayout';
 import TextContent from '../layouts/TextContent';
 import LinkContent from '../layouts/LinkContent';
 import fs from 'fs';
 import matter from 'gray-matter';
 import PostCard from '../components/Articles/PostCard';
+import { Circle, Square, Triangle } from '../components/Shapes/Shapes';
 
 export const getStaticProps = async () => {
   const files = await fs.readdirSync(`${process.cwd()}/content/`);
@@ -47,6 +48,7 @@ export default function Home({ posts }) {
         spacing={4}
         divider={<StackDivider borderColor={useColorModeValue('black', 'white')}/>}
         align='stretch'
+        overflow="hidden"
         >
           <Box>
             <TextContent>

@@ -32,4 +32,15 @@
     "title":"SQL injection Information Disclosure",
     "cve": "CVE-2020-4003",
     "vendor":"VMWare"
-}]
+},
+{
+    "title":"Authenticated RCE",
+    "cve": "CVE-2021-1362",
+    "vendor":"Cisco"
+},
+{
+    "title":"Reflected Cross-Site Scripting",
+    "cve": "CVE-2021-1407",
+    "vendor":"Cisco"
+}
+]

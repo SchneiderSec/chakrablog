@@ -1,3 +1,4 @@
+import { ColorModeScript } from '@chakra-ui/react';
 import Document, {
     Head,
     Html,
@@ -13,11 +14,9 @@ class MyDocument extends Document {
     render() {
         return (
             <Html lang='en-US'>
-                <Head>
-                    <meta charSet='utf-8' />
-                    <script type="text/javascript" src='/noflash.js' />
-                </Head>
+                <Head />
                 <body className='loading'>
+                    <ColorModeScript />
                     <Main />
                     <NextScript />
                 </body>
