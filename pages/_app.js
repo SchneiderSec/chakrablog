@@ -1,14 +1,9 @@
 import '../styles/globals.css'
-import { Box, ChakraProvider, useColorModeValue } from '@chakra-ui/react';
 import theme from '../styles/theme'
-import DeskNavbar from '../components/Navbar/DeskNavbar';
-import MobileNav from '../components/Navbar/MobileNav';
-import Footer from '../components/Navbar/Footer';
 import React, { useState, useEffect } from 'react';
-import { Circle, Square, Triangle } from '../components/Shapes/Shapes';
-import { Chakra } from '../components/Chakra'
 import Router from 'next/router';
 import MainLayout from '../components/layouts/MainLayout';
+import { ChakraProvider } from '@chakra-ui/react';
 
 function MyApp({ Component, pageProps }) {
   const [ loading, setLoading ] = useState(false)
@@ -26,13 +21,13 @@ function MyApp({ Component, pageProps }) {
   }, [])
 
   return (
-    loading ? <div>test</div> :
-    <Chakra theme={theme} resetCSS>
+    <ChakraProvider theme={theme} resetCSS>
         <MainLayout>
           <Component {...pageProps}/>
         </MainLayout>
-    </Chakra>
+    </ChakraProvider>
   )
 }
 
 export default MyApp
+export { getServerSideProps } from '../components/Chakra'

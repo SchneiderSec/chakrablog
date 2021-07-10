@@ -1,4 +1,4 @@
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import DeskNavbar from "../Navbar/DeskNavbar";
 import Footer from "../Navbar/Footer";
 import MobileNav from "../Navbar/MobileNav";
@@ -10,12 +10,11 @@ const MainLayout = ({ children }) => {
             <Triangle w="120px" />
             <Square w="120px" h="120px"/>
             <Circle width="120px" height="120px"/>
+            <DeskNavbar  />
+            <MobileNav />
             <Box
             maxW="100%"
            >
-            
-            <DeskNavbar  />
-            <MobileNav />
                 {children}
             </Box>
             <Footer />

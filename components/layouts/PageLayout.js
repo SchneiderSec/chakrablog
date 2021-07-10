@@ -1,7 +1,8 @@
-import { Heading, Text, Flex, Stack, useColorModeValue } from '@chakra-ui/react';
+import { Heading, Text, Flex, Stack, useColorMode } from '@chakra-ui/react';
 import TextContent from '../../layouts/TextContent';
 
 export default function PageLayout({heading, children, ...rest}){
+  const { colorMode } = useColorMode()
     return(
         <Stack
         as="main"
