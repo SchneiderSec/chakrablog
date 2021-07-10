@@ -1,6 +1,9 @@
 import { extendTheme } from '@chakra-ui/react';
 
 const themes = {
+    config: {
+        useSystemColorMode: true
+    },
     styles: {
         global: (props) => ({
             "*": {
@@ -12,8 +15,7 @@ const themes = {
             },
         })
     },
-    initialColorMode: 'dark',
-    useSystemColorMode: false
+    initialColorMode: 'dark'
 }
 
 const theme = extendTheme(themes)

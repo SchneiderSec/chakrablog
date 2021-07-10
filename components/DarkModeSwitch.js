@@ -17,6 +17,8 @@ const DarkModeSwitch = ({ ...rest}) => {
             }}
             size="xs"
             as="span"
+            title="Toggle color mode."
+            aria-label="Toggle color mode."
             {...rest}
             backgroundColor="inherit"
         />
