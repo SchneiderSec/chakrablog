@@ -8,6 +8,7 @@ import Document, {
 import theme from '../styles/theme'
 
 class MyDocument extends Document {
+    
     render() {
         return (
             <Html lang='en-US'>
