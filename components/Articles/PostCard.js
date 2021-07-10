@@ -14,6 +14,7 @@ const PostCard = ({ frontMatter, ...rest }) => {
             w={['xs', 'md', 'lg', 'lg']} 
             borderRadius="lg" 
             bgColor={useColorModeValue('white', 'gray.700')}
+            boxShadow={useColorModeValue("0px 7px 17px -8px black")}
             mb="3" 
             p="5"
             mr="3"

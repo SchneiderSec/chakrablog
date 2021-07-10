@@ -5,6 +5,7 @@ import Document, {
     Main,
     NextScript
 } from 'next/document';
+import theme from '../styles/theme'
 
 class MyDocument extends Document {
     render() {
@@ -12,7 +13,7 @@ class MyDocument extends Document {
             <Html lang='en-US'>
                 <Head />
                 <body>
-                    <ColorModeScript />
+                    <ColorModeScript initialColorMode={theme.config.initialColorMode}/>
                     <Main />
                     <NextScript />
                 </body>

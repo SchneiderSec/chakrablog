@@ -6,10 +6,11 @@ import MobileNav from '../components/Navbar/MobileNav';
 import Footer from '../components/Navbar/Footer';
 import React from 'react';
 import { Circle, Square, Triangle } from '../components/Shapes/Shapes';
+import { Chakra } from '../components/Chakra'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme} resetCSS>
+    <Chakra theme={theme} resetCSS>
         <Box
           maxW="100%"
         >
@@ -23,7 +24,7 @@ function MyApp({ Component, pageProps }) {
           <Circle width="120px" height="120px"/>
           </Box>
         <Footer />
-    </ChakraProvider>
+    </Chakra>
   )
 }
 

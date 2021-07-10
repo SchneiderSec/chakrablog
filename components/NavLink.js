@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 
 const NavLink = ({ label, to = '/', ...rest }) => {
-    const { colorMode, toggleColorMode } = useColorMode();
+    const { colorMode } = useColorMode();
     const router = useRouter();
     const isActive = router.pathname === to;
     const color = isActive ? colorMode === 'light' ? 'red.800' : 'teal.100' : null
