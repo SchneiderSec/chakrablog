@@ -11,7 +11,7 @@ const PostCard = ({ frontMatter, ...rest }) => {
     >
         <Box 
             maxW="lg" 
-            w={['xs', 'md', 'lg', 'lg']} 
+            w={['xs', 'md', 'md', 'md']} 
             borderRadius="lg" 
             bgColor={useColorModeValue('white', 'gray.700')}
             boxShadow={useColorModeValue("0px 7px 17px -8px black")}
