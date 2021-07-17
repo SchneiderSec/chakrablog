@@ -1,10 +1,11 @@
-import { ColorModeScript } from '@chakra-ui/react';
+import { FlashlessScript } from 'chakra-ui-flashless';
 import Document, {
     Head,
     Html,
     Main,
     NextScript
 } from 'next/document';
+import theme from '../styles/theme'
 
 class MyDocument extends Document {
     
@@ -13,7 +14,7 @@ class MyDocument extends Document {
             <Html lang='en-US'>
                 <Head />
                 <body>
-                    <ColorModeScript/>
+                    <FlashlessScript theme={ theme } />
                     <Main />
                     <NextScript />
                 </body>

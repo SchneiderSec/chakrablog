@@ -1,4 +1,5 @@
-import { extendTheme, useColorModeValue } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
+import { flashless } from 'chakra-ui-flashless'
 
 const themes = {
     useSystemColorMode: false,
@@ -22,6 +23,6 @@ const themes = {
     }
 }
 
-const theme = extendTheme(themes)
+const theme = extendTheme(flashless(themes))
 
 export default theme;
