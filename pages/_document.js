@@ -14,7 +14,7 @@ class MyDocument extends Document {
             <Html lang='en-US'>
                 <Head />
                 <body>
-                    <FlashlessScript theme={ theme } />
+                    <FlashlessScript theme={theme} />
                     <Main />
                     <NextScript />
                 </body>

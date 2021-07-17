@@ -2,7 +2,9 @@ import { extendTheme } from '@chakra-ui/react';
 import { flashless } from 'chakra-ui-flashless'
 
 const themes = {
-    useSystemColorMode: false,
+    config: {
+        useSystemColorMode: false
+    },
     styles: {
         global: (props) => ({
             "html": {
