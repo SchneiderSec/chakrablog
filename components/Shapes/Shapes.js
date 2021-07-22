@@ -35,6 +35,9 @@ const Circle = ({ ...rest }) => {
             rounded="full"
             filter="blur(8px) saturate(160%)"
             {...rest}
+            initial={{
+                opacity: 0
+            }}
             animate={[{ 
                 filter: "blur(3px) saturate(100%)",
                 transition: {
@@ -54,6 +57,12 @@ const Circle = ({ ...rest }) => {
                         duration: 20,
                         repeat: Infinity,
                         repeatType: 'reverse'
+                    }
+                },
+                {
+                    opacity: 1,
+                    transition: {
+                        duration: 2
                     }
                 }
             ]}
@@ -85,10 +94,9 @@ const Square = ({ ...rest }) => {
             rounded="6px"
             filter="blur(8px) saturate(160%)"
             zIndex="0"
-            initial={{ opacity: 0.5 }}
+            initial={{ opacity: 0 }}
             {...rest}
             animate={[{
-                opacity: 1,
                 x: 40,
                 rotate: 50,
                 transition: {
@@ -97,7 +105,6 @@ const Square = ({ ...rest }) => {
                     repeatType: 'reverse'
                 }
             },{
-                opacity: 1,
                 scale: 1.10,
                 transition: {
                     duration: 5,
@@ -105,16 +112,19 @@ const Square = ({ ...rest }) => {
                     repeatType: 'reverse'
                 }
             },{
-                opacity: 1,
                 y: [50, -50],
                 transition: {
                     duration: 20,
                     repeat: Infinity,
                     repeatType: 'reverse'
+                    }
+                },{
+                    opacity: 1,
+                    transition: {
+                        duration: 2
+                    }
                 }
-            }
-                ]
-                }
+            ]}
             transition={{
                 repeat: Infinity,
                 repeatType: 'reverse'
@@ -141,6 +151,9 @@ const Triangle = ({...rest }) => {
                 top="5%"
                 zIndex="0"
                 {...rest}
+                initial={{
+                    opacity: 0
+                }}
                 animate={[{
                     x: [-100, 20],
                     rotate: 50,
@@ -155,6 +168,11 @@ const Triangle = ({...rest }) => {
                         duration: 15,
                         repeat: Infinity,
                         repeatType: 'reverse'
+                    }
+                },{
+                    opacity: 1,
+                    transition: {
+                        duration: 2
                     }
                 }
             ]}
