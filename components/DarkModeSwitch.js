@@ -1,4 +1,4 @@
-import { useColorMode, IconButton, Icon } from '@chakra-ui/react';
+import { useColorMode, IconButton, Icon, useColorModeValue } from '@chakra-ui/react';
 import { FaSun } from 'react-icons/fa'
 import { BsMoon } from 'react-icons/bs'
 
@@ -9,6 +9,7 @@ const DarkModeSwitch = ({ ...rest}) => {
         <IconButton 
             aria-label="Toggle Dark Mode"
             icon={colorMode === 'dark' ? <Icon as={FaSun} /> : <Icon as={BsMoon} />}
+            boxShadow={useColorModeValue('0px 0px 1px black', '0px 0px 1px white')}
             onClick={toggleColorMode}
             _focus={{ boxShadow: colorMode === 'light' ? '0px 0px 3px black' : '0px 0px 3px white'}}
             _hover={{

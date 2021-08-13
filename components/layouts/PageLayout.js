@@ -2,7 +2,6 @@ import { Heading, Text, Flex, Stack, useColorMode } from '@chakra-ui/react';
 import TextContent from '../../layouts/TextContent';
 
 export default function PageLayout({heading, children, ...rest}){
-  const { colorMode } = useColorMode()
     return(
         <Stack
         as="main"
@@ -11,12 +10,12 @@ export default function PageLayout({heading, children, ...rest}){
       >
         <Flex
           flexDirection="column"
-          maxWidth="lg"
+          maxW={['lg', '2xl', '2xl', '2xl']}
           mx="auto"
         >
           <Heading
             as="h1"
-            fontSize={['30px', '30px', '30px', '30px']}
+            fontSize={['20px', '30px', '30px', '30px']}
             mb="5"
             ml="2"
           >

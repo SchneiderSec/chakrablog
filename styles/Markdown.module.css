@@ -1,5 +1,24 @@
 @media only screen and (max-width: 700px){
     .testCodeBlock{
-        font-size: small;
+        max-width: 20em;
     }
+    .testCodeBlock p{
+        font-size: large;
+        font-weight: 400;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+.testCodeBlock h2{
+    font-size: 22px;
+    margin: 10px;
+    font-weight: bolder;
+}
+
+.testCodeBlock p{
+        word-wrap: break-word;
+        word-spacing: 1px;
+        margin-top: 20px;
+        margin-bottom: 20px;
 }

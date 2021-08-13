@@ -20,7 +20,7 @@ const DeskNavbar = () => {
             display={["none", "flex", "flex", "flex"]}
             maxWidth={['100%', '100%', '100%', '968px']}
         >
-                <Box mx="auto">
+                <Box mx="auto" >
                     <Box d="flex">
                     <NavLink label="SchneiderSec" to="/" fontSize="xl" as="h3" />
                         <Box ml="2" display={['block', 'block', 'block', 'block']} align="center">

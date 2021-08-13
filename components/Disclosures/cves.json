@@ -42,5 +42,10 @@
     "title":"Reflected Cross-Site Scripting",
     "cve": "CVE-2021-1407",
     "vendor":"Cisco"
+},
+{
+    "title": "Authenticated Remote Code Execution - Pi-Hole",
+    "cve": "CVE-2021-32706",
+    "vendor": "Pi-Hole"
 }
 ]

@@ -1,4 +1,4 @@
-import { Flex, Stack, Menu, Box, Text, MenuList, MenuItem, MenuButton, Button, Icon, Spacer  } from "@chakra-ui/react"
+import { Flex, Stack, Menu, Box, Text, MenuList, MenuItem, MenuButton, Button, Icon, Spacer, useColorModeValue  } from "@chakra-ui/react"
 import DarkModeSwitch from "../DarkModeSwitch"
 import NavLink from "../NavLink"
 import { TiThMenu, TiThMenuOutline } from 'react-icons/ti'
@@ -27,6 +27,7 @@ const MobileNav = () => {
             p={4}
             display={["flex", "none", "none", "none"]}
             maxWidth='100%'
+            backgroundColor={useColorModeValue("rgba(230, 230, 230, 0.304)", "rgba(133, 133, 133, 0.204)")}
         >
                 <Box>
                     <Box d="flex">
@@ -38,7 +39,7 @@ const MobileNav = () => {
                 </Box>
                 <Box>
                     <Menu onOpen={() => setMenuOpen(true)} onClose={() => setMenuOpen(false)} >  
-                        <MenuButton as={Button} _focus={{ outline: 'none' }}>
+                        <MenuButton as={Button} _focus={{ outline: 'none' }} border={useColorModeValue("2px solid rgba(83, 83, 83, 0.404)", "2px solid rgba(193, 193, 193, 0.404)")}>
                             <Icon as={menuOpen ? TiThMenuOutline : TiThMenu} />
                         </MenuButton>
                         <MenuList>
