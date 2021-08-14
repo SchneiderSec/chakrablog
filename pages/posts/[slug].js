@@ -4,6 +4,7 @@ import PageLayout from '../../components/layouts/PageLayout';
 import CodeBlock from '../../components/layouts/CodeBlock';
 import classes from '../../styles/Markdown.module.css'
 import { PostImage } from '../../components/Articles';
+import Tags from '../../components/Tags/Tags';
 
 export async function getStaticPaths(){
   const slugs = await getPosts();
@@ -33,8 +34,8 @@ export default function Post({ slug, meta, content }){
         <PageLayout heading={meta.title}>
           <div 
             style={{ marginLeft: '5px' }}
-            
           >
+            {meta.tags.map(tag => <Tags key={tag} type={tag}/>)}
               {<Markdown 
                 escapeHtml={true} 
                 source={content}

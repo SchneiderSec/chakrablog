@@ -1,7 +1,8 @@
 import { Box, Heading, Link, Text, useColorModeValue } from "@chakra-ui/react";
+import Tags from "../Tags/Tags";
 
 const PostCard = ({ frontMatter, ...rest }) => {
-    const { title, excerpt, date, slug } = frontMatter; 
+    const { title, excerpt, date, slug, tags } = frontMatter; 
     return(
     <Link
         href={`/posts/${slug}`}
@@ -24,13 +25,17 @@ const PostCard = ({ frontMatter, ...rest }) => {
                 fontSize={['md', 'lg', 'lg', 'lg']} 
                 as="h3"
                 fontWeight="600"
-                
                 >
                 {title}
             </Heading>
             <Text fontSize="xs" color="inherit" fontWeight="300">
                     {date}
             </Text>
+            {tags &&
+            <Box p="0">
+                {tags.map(tag => <Tags key={tag} type={tag}/>)}
+            </Box>
+            }
             <Box p="2" fontSize="md">
                 {excerpt}
             </Box>

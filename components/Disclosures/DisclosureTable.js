@@ -25,6 +25,7 @@ export default function DisclosureTable(){
                         cve={cve.cve}
                         link="N/A"
                         key={idx}
+                        writeup={cve.writeup || false}
                         />
 
                     ))

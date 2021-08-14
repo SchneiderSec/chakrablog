@@ -46,6 +46,7 @@
 {
     "title": "Authenticated Remote Code Execution - Pi-Hole",
     "cve": "CVE-2021-32706",
-    "vendor": "Pi-Hole"
+    "vendor": "Pi-Hole",
+    "writeup": "pi-hole-rce-the-full-shell-puzzle"
 }
 ]

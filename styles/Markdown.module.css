@@ -22,3 +22,10 @@
         margin-top: 20px;
         margin-bottom: 20px;
 }
+
+.testCodeBlock a{
+    color: red;
+}
+.testCodeBlock a:hover{
+    color: rgb(255, 152, 152);
+}

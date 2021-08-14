@@ -3,11 +3,14 @@ title: PiHole RCE - The Full Shell Puzzle
 date: 2021-08-09
 author: Chris Schneider
 excerpt: How a small mistake in regular expressions led to remote code execution.
+tags: [php, writeup, code review]
 ---
 
 In my quest to get better with code review I decided to look at applications I run on my network. PiHole was a perfect target because PHP is relatively easy to read and is often riddled with issues. While reviewing the code I noticed something strange. PiHole uses quite a bit of shell commands and often with user input. The approach they've taken to prevent malicious payloads is to check against regular expressions. This is a solid approach if the regex is strict enough.
 
 **note**: The version in the screenshots is v5.5
+
+**POC**: [Pihole POC](/files/piholePOC.txt)
 
 ## The Mistake
 
