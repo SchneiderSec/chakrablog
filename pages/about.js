@@ -5,7 +5,7 @@ import LinkContent from '../layouts/LinkContent';
 export default function About() {
     return(
     <>
-      <PageLayout heading="About Me">
+      <PageLayout heading="About Me" description="The about me page for SchneiderSec.">
         <TextContent>
           My name is Chris Schneider and I work as a professional in the Information Security space.
           I primarily focus on identifying issues in web applications via code review and black box methodology.

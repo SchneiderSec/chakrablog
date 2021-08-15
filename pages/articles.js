@@ -43,7 +43,7 @@ export default function Articles({ posts }) {
     ))
   return (
     <>
-      <PageLayout heading="Articles">
+      <PageLayout heading="Articles" description="All articles published by SchneiderSec. This can include writeups, code reviews (PHP, C++, Java, JS, etc...), web development, and more... ">
         <div 
           style={{ marginLeft: '5px' }}
         >

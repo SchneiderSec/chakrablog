@@ -3,6 +3,7 @@ title: PiHole RCE - The Full Shell Puzzle
 date: 2021-08-09
 author: Chris Schneider
 excerpt: How a small mistake in regular expressions led to remote code execution.
+description: A vulnerability (CVE-2021-32706) affecting versions <=5.5 of Pi-Hole. Exploiting a mistake in a regex check leads to authenticated remote code execution but with a twist.
 tags: [php, writeup, code review]
 ---
 

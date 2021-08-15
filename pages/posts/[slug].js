@@ -31,7 +31,7 @@ export const getStaticProps = async ({ params }) => {
 
 export default function Post({ slug, meta, content }){
     return(
-        <PageLayout heading={meta.title}>
+        <PageLayout heading={meta.title} description={meta.description}>
           <div 
             style={{ marginLeft: '5px' }}
           >

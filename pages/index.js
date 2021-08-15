@@ -43,7 +43,7 @@ export const getStaticProps = async () => {
 
 export default function Home({ posts }) {
   return (
-      <PageLayout heading="Welcome">
+      <PageLayout heading="Welcome" description="This website was created by SchneiderSec and is a platform to share Cyber Security knowledge through writeups, tutorials, and blog posts.">
         <VStack
         spacing={4}
         divider={<StackDivider borderColor={useColorModeValue('black', 'white')}/>}
