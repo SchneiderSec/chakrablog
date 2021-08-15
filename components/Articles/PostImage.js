@@ -9,7 +9,7 @@ const PostImage = ({ src, alt }) => {
         marginBottom={5}
         display="inline-block"
       >
-        <Image src={src} />
+        <Image src={src} alt={alt}/>
         <chakra.figcaption
           fontSize={15}
           color={useColorModeValue("gray.700", "gray.400")}

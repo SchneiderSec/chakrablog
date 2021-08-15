@@ -39,7 +39,7 @@ const MobileNav = () => {
                 </Box>
                 <Box>
                     <Menu onOpen={() => setMenuOpen(true)} onClose={() => setMenuOpen(false)} >  
-                        <MenuButton as={Button} _focus={{ outline: 'none' }} border={useColorModeValue("2px solid rgba(83, 83, 83, 0.404)", "2px solid rgba(193, 193, 193, 0.404)")}>
+                        <MenuButton aria-label="Menu Button" as={Button} _focus={{ outline: 'none' }} border={useColorModeValue("2px solid rgba(83, 83, 83, 0.404)", "2px solid rgba(193, 193, 193, 0.404)")}>
                             <Icon as={menuOpen ? TiThMenuOutline : TiThMenu} />
                         </MenuButton>
                         <MenuList>

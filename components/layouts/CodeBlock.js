@@ -29,7 +29,7 @@ export default function CodeBlock({ language, value, node, ...rest }){
     let highlightedLines = []
     
     value.split('\r\n').forEach( (item, index) => {
-        if (item.startsWith("**")) {
+        if (item.indexOf("**") !== -1) {
             value = value.replace("**", "  ")
             highlightedLines.push(index + 1)
         }
