@@ -49,7 +49,6 @@ export default function CodeBlock({ language, value, node }){
                 lineNumberStyle={{ display: 'none' }}
                 lineProps={ (lineNumber) => {
                     let style = {};
-                    console.log('Highlighted Lines: ', highlightedLines);
                     if (highlightedLines.includes(lineNumber)){
                         style.backgroundColor = "rgba(251, 255, 0, 0.404)";
                     }
