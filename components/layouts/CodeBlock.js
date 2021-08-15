@@ -24,11 +24,11 @@ const FileName = ({ name }) => {
     )
 }
 
-export default function CodeBlock({ language, value, node, ...rest }){
+export default function CodeBlock({ language, value, node }){
     const { colorMode } = useColorMode();
     let highlightedLines = []
     
-    value.split('\r\n').forEach( (item, index) => {
+    value.split('\n').forEach( (item, index) => {
         if (item.indexOf("**") !== -1) {
             value = value.replace("**", "  ")
             highlightedLines.push(index + 1)
@@ -49,6 +49,7 @@ export default function CodeBlock({ language, value, node, ...rest }){
                 lineNumberStyle={{ display: 'none' }}
                 lineProps={ (lineNumber) => {
                     let style = {};
+                    console.log('Highlighted Lines: ', highlightedLines);
                     if (highlightedLines.includes(lineNumber)){
                         style.backgroundColor = "rgba(251, 255, 0, 0.404)";
                     }
