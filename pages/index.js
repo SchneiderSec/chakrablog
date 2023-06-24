@@ -52,7 +52,7 @@ export default function Home({ posts }) {
         >
           <Box>
             <TextContent>
-              My name is Chris Schneider and I work as a professional in the Information Security space. Test deploy
+              My name is Chris Schneider and I work as a professional in the Information Security space.
               <br />
               <LinkContent fontSize="sm" to="/about">Read more about me...</LinkContent>
             </TextContent>
